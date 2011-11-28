@@ -212,7 +212,6 @@ div#sidebar {
 
 div#content {
   float: left;
-  background:#fff;
   width:900px;
 }
 
@@ -266,6 +265,11 @@ div#product-variants ul li label { cursor: pointer; }
 div#product-images { width: 50%; }
 div#product-images, div#main-image, div#cart-form { float: left; }
 div#product-description { float: none; clear: both; }
+
+#breadcrumbs {
+  
+  background:#fff;
+}
 
 ul.thumbnails, #breadcrumbs ul {
   margin: 0;
@@ -386,8 +390,8 @@ p.clr, .clr { clear:both; padding:0; margin:0; background:none; }
 p.bg, .bg { clear:both; padding:0; margin:10px 0; border-bottom:1px solid #bababa; height:2px; }
 input, select, textarea { border:#cfcfcf 1px solid; color:#404040; font-size:12px; padding:3px; font-family:Arial, Verdana, Helvetica, sans-serif; }
 li { list-style:none; }
-h1, h2 { color:#222222; font-size:1.5em; font-weight:normal; letter-spacing:-1px; margin:0 0 1em; }
-h3 { color:#333333; font-size:1.2em; margin:0 0 .8em; }
+h1, h2 { color:#bcbcbc; font-size:1.5em; font-weight:normal; letter-spacing:-1px; margin:0 0 1em; }
+h3 { color:#858585; font-size:1.2em; margin:0 0 .8em; }
 h4 { font-size:1em; margin:0 0 1em; }
 p { line-height:1.5em; padding:0 0 1.3em; }
 /*=== Layout ===*/
@@ -462,8 +466,8 @@ padding-tp:15px;
 /*=== All Columns ===*/
 #columns { margin:0 auto; padding:0; width:970px;}
 /*=== Center Column ===*/
-#centercol { float:right; width:652px; padding:0; }
-#centercol .box { background:#fff; padding:20px 15px;}
+#centercol { float:right; width:750px; padding:0; }
+#centercol .box { background:#fff; margin: 5px; padding:20px 15px; width:276px; float:left; height:275px;}
 #centercol .box.fr { width:286px; float:right; height:325px;}
 #centercol .box.fl { width:286px; float:left; height:325px}
 #centercol .box.full { width:625px; float:right; height:325px;}

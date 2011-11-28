@@ -62,8 +62,6 @@
   </div>
   <!--/header -->
 <div id = 'columns'>
-        
-
     <div id="wrapper" data-hook>
       <div id="rightcol">
         <div class="box ads">
@@ -77,13 +75,15 @@
       <% end %>
       </div>
       </div>
-      <div id="content" data-hook>
+      <div id = 'centercol'>
+      
         <%= breadcrumbs(@taxon) %>
         <%= flash_messages %>
         <%= yield %>
+      
       </div>
     </div>
-
+  </div>
     <div id="footer" data-hook>
       <div id="footer-left" data-hook>
         <p><%= t(:powered_by) %> <%= link_to 'Spree', 'http://spreecommerce.com/' %>

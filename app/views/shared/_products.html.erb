@@ -10,14 +10,20 @@
 
 <% if products.any? %>
 <ul id="products" class="product-listing" data-hook>
+  
   <% products.each do |product| %>
     <% if Spree::Config[:show_zero_stock_products] || product.has_stock? %>
+  <div class = 'box'>    
+      <div class = 'content'>
       <li id="product_<%= product.id %>" data-hook="products_list_item">
         <%= link_to product.name, product, :class => 'info' %>
         <%= link_to small_image(product), product %>
         <span class="price selling"><%= product_price(product) %></span>
       </li>
+      </div>
+    </div>  
     <% end %>
+    
   <% end %>
 </ul>
 <% end %>
