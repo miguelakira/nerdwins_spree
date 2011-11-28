@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+  <head data-hook="inside_head">
+    <%= render 'shared/head' %>
+  </head>
+  <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
+    
+
+
+<div id="page">
+  <div class="nav_resize">
+    <div id="nav1">
+    
+      <ul id="nav-bar" data-hook>
+        <%= render 'shared/nav_bar' %>
+        <li id="link-to-cart carrinho" style='float:right;' data-hook><%= link_to_cart %></li>
+    
+      </ul>
+      
+    <div class="clr"></div>
+    </div>
+  </div>
+
+  <div id="header">
+    <div id="logo" style='float:left; margin:15px 0;' data-hook>
+      <%= logo %>
+    </div>
+
+  <div class="clr"></div>
+    <div class="header_white">
+      
+      <div class="topnavi">
+        <ul>
+          <li class="current_page_item"><a href="#" title="Camisetas"><span>Camisetas</span></a></li>
+          <li class="page_item page-item-2"><a href="#" title="Camisas"><span>Camisas</span></a></li>
+          <li class="page_item page-item-3"><a href="#" title="Calças"><span>Calças</span></a></li>
+          <li class="page_item page-item-4"><a href="#" title="Acessórios"><span>Acessórios</span></a></li>
+        </ul>
+        <div class="search" style='display:inline'>
+          <span><%= render 'shared/search' %></span>
+          <!--/searchform -->
+        </div>
+        <div class="clr"></div>
+      </div>
+      <!--/topnav -->
+              <div class="clr"></div>
+
+      <div class="header_h2">
+        <div id="nav_wrapper">
+      <div class="slider">
+        <div id="coin-slider"> <a href="#"><img src="/assets/store/slider_img_1.jpg" width="894" height="368" alt="slide1" /></a><a href="#"><img src="/assets/store/slider_img_2.jpg" width="894" height="368" alt="slide1" /></a> <a href="#"><img src="/assets/store/slider_img_3.jpg" width="894" height="368" alt="slide1" /></a> </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+    <!--/slider -->
+      </div>
+      <!--/header_h2 -->
+      <div class="clr"></div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <!--/header -->
+<div id = 'columns'>
+        
+
+    <div id="wrapper" data-hook>
+      <div id="rightcol">
+        <div class="box ads">
+        <div class="wtitle">
+          <h2>Novidades</h2>
+        </div>
+      <% if content_for?(:sidebar) %>
+        <div id="sidebar" data-hook>
+          <%= yield :sidebar %>
+        </div>
+      <% end %>
+      </div>
+      </div>
+      <div id="content" data-hook>
+        <%= breadcrumbs(@taxon) %>
+        <%= flash_messages %>
+        <%= yield %>
+      </div>
+    </div>
+
+    <div id="footer" data-hook>
+      <div id="footer-left" data-hook>
+        <p><%= t(:powered_by) %> <%= link_to 'Spree', 'http://spreecommerce.com/' %>
+      
+      
+ &copy; Nerd_Wins. Todos os direitos reservados</p>
+      </div>
+    </div>
+    <%= render 'shared/google_analytics' %>
+  </body>
+</html>
